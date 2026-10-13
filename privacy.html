@@ -27,7 +27,7 @@
       <div class="wrap prose">
         <h1>Privacy Policy</h1>
         <p class="meta">
-          For Brick Rivals, Daisy Grid, Pour Palette and Word Grove by Noctizzle · Effective 9 October 2026
+          For Brick Rivals, Daisy Grid, Pour Palette and Word Grove by Noctizzle · Effective 13 October 2026
         </p>
 
         <div class="note">
@@ -46,9 +46,9 @@
             <li>
               Brick Rivals only goes online if you choose to play ranked duels or see the global leaderboards. It then
               uses an anonymous online profile (not linked to your name, email or phone number) with a randomly
-              generated player name. Other players see that name, your trophies and your scores. You can delete the
-              profile in the game at any time, and it is deleted automatically within 30 days of the last time the game
-              connected to it.
+              generated player name. Other players see that name, your trophies and your scores, and can race a
+              recording of your recent ranked duels as a "ghost". You can delete the profile in the game at any time,
+              and it is deleted automatically within 30 days of the last time the game connected to it.
             </li>
           </ul>
         </div>
@@ -128,7 +128,9 @@
         <p>If a game offers the one-time Remove Ads purchase, <a href="#purchases">section 6</a> also applies.</p>
 
         <h3 id="brick-brawl">Brick Rivals</h3>
-        <p>Brick Rivals was called Brick Brawl until 8 October 2026. Only the name changed: this section covers both.</p>
+        <p>
+          Brick Rivals was called Brick Brawl until 8 October 2026. Only the name changed: this section covers both.
+        </p>
         <p>
           Shows Google AdMob ads (<a href="#ads">section 4</a>). If you choose to play ranked duels or see the global
           leaderboards, it creates an anonymous online profile (<a href="#brick-brawl-online">section 5</a>). Arcade
@@ -243,13 +245,14 @@
         <h3>Ad content</h3>
         <p>
           We ask Google to show only ads rated PG (suitable for most audiences, with parental guidance). The games are
-          made for players aged 13 and over, so we don't mark them as directed at children.
+          made for players aged 16 and over, so we don't tell Google that they are directed at children or that their
+          players are under the age of consent.
         </p>
 
         <h2 id="brick-brawl-online">5. Brick Rivals online profile</h2>
         <p>
-          Brick Rivals's online duels and leaderboards use Supabase, a database service that stores the information below
-          on our behalf.
+          Brick Rivals's online duels and leaderboards use Supabase, a database service that stores the information
+          below on our behalf.
         </p>
         <h3>When the profile is created</h3>
         <p>
@@ -266,9 +269,28 @@
           <li>your trophies (your duel rating), wins, losses, draws and win streak;</li>
           <li>
             your arcade scores and the wave you reached, with the time each was submitted and how long the run lasted
-            (while you're online, a score is sent automatically when an arcade run ends with a score above zero);
+            (while you're online, a score is sent automatically when an arcade run ends with a score above zero). We
+            keep each arcade score until the end of the week it was made in (weeks start on Monday, UTC), for the weekly
+            leaderboard. After that we keep only your best score, the best one other players see if that is a different
+            one, and any score still waiting to be checked;
           </li>
           <li>your ranked duels: who you played, the scores, the trophy changes and when they happened;</li>
+          <li>
+            your ghost runs: a recording of your board in your two newest ranked duels that scored 2,000 or more, so
+            other players can race it as a "ghost" when nobody else is searching. It holds where you moved your paddle
+            and when you tapped, when your opponent's junk reached your board, and when the duel's clock ran out, with
+            that duel's score, the version of the duel rules, whether it was on a shaped court and your trophies when
+            you played it. It doesn't include anything about your phone or where you are;
+          </li>
+          <li>
+            the ghosts you're offered and race: which ghost and whose it was, the scores, your trophies when the race
+            started, the trophy change and when;
+          </li>
+          <li>
+            if you or your opponent asked for a rematch after a ranked duel: who asked, when, and how many times;
+            whether the other player said no or the one who asked withdrew it, and when; and the rematch it started.
+            This is kept with that duel and deleted with it;
+          </li>
           <li>
             while you search for an opponent, a matchmaking entry with your trophies and the version of the duel rules
             your game uses (so you're only matched with players on the same rules);
@@ -298,25 +320,34 @@
             duel the two phones exchange live game information through Supabase: your player name, trophies and ball
             trail, the version of the duel rules your game uses (so two different game versions don't play an unfair
             match), whether your game is on a shaped court (so both phones play the same one), and your score, combo,
-            wave, board layout, attacks and final score. These live messages aren't stored.
+            wave, board layout, attacks, how many of your opponent's junk rows you blocked, and final score. After the
+            duel they also carry any preset reaction you send (such as "GG"), and whether you've asked for a rematch or
+            left the result screen. These live messages aren't stored.
+          </li>
+          <li>
+            <strong>Ghost races</strong>: when a player's ranked search finds nobody, they can race one of your ghost
+            runs. Their phone gets the recording, to play it back, and they see your player name, ball trail, the
+            trophies you had when you played it and how long ago that was, and your board, score and attacks as the
+            recording plays back. A ghost race changes only the racer's trophies, never yours.
           </li>
         </ul>
         <p>
           The server checks that submitted scores are plausible and limits how often they can be sent, to keep the
           leaderboards fair. An unusually high arcade score, or one made unusually fast for the length of the run, is
-          shown only to you until we have checked it. Ranked duels have daily limits on the trophies you can win and on
-          rated duels against the same player, and an unusually high win rate or duel score is flagged for us to check.
-          If a profile cheats, we can hide it from the leaderboards other players see. These checks use only your game
-          records listed above.
+          shown only to you until we have checked it. Ranked duels and ghost races have daily limits on the trophies you
+          can win and on rated games against the same player, and an unusually high win rate or score is flagged for us
+          to check. A duel score that is flagged, or one from a profile that is flagged or hidden, is never kept as a
+          ghost run. If a profile cheats, we can hide it from the leaderboards other players see. These checks use only
+          your game records listed above.
         </p>
         <h3>Deleting your profile</h3>
         <p>
           In Brick Rivals, go to the Home screen and tap the gear icon (top left) to open Settings. Tap
           <strong>Delete online profile</strong>, then <strong>Delete it</strong> to confirm. (This button appears only
-          while online play is on.) This removes your anonymous sign-in, your profile, your arcade scores and every
-          ranked duel you played, including from your opponents' history. Your opponents' trophies aren't recalculated.
-          After you delete it, Brick Rivals stays offline: it won't create a new profile or send scores unless you choose
-          to play online again.
+          while online play is on.) This removes your anonymous sign-in, your profile, your arcade scores, your ghost
+          runs and ghost races, and every ranked duel you played, including from your opponents' history. Your
+          opponents' trophies aren't recalculated. After you delete it, Brick Rivals stays offline: it won't create a
+          new profile or send scores unless you choose to play online again.
         </p>
         <p>
           Your profile is also deleted automatically, with everything linked to it, within 30 days of the last time
@@ -377,7 +408,10 @@
                 <td>Our legitimate interests in funding free games and preventing ad fraud</td>
               </tr>
               <tr>
-                <td>Brick Rivals's online duels, matchmaking, trophies and leaderboards, and keeping them fair</td>
+                <td>
+                  Brick Rivals's online duels, matchmaking, ghost races, trophies and leaderboards, and keeping them
+                  fair
+                </td>
                 <td><a href="#brick-brawl-online">Section 5</a></td>
                 <td>
                   Our legitimate interests in running fair online play for players who choose it. Your profile uses a
@@ -404,8 +438,9 @@
         </div>
         <p>
           <strong>Send feedback.</strong> If you tap Send feedback in a game's Settings, your own email app opens with a
-          message that already includes the game's version, your Android version and your phone's maker and model, to
-          help us fix problems. Nothing is sent until you press send, and you can delete those details first.
+          message that already includes the game's version, your Android version, your phone's maker and model, and a
+          short technical log of the game's music player (track names and timings, nothing about you), to help us fix
+          problems. Nothing is sent until you press send, and you can delete those details first.
         </p>
         <p>
           You don't have to give us any personal information, and no law or contract requires you to. Ads keep the games
@@ -512,11 +547,29 @@
                 <td>Until you clear the game's storage or uninstall it</td>
               </tr>
               <tr>
-                <td>Brick Rivals online profile, scores and duels, and its sign-in session record</td>
+                <td>Brick Rivals online profile, best arcade scores and duels, and its sign-in session record</td>
                 <td>
                   Until you delete the profile in the game, or automatically within 30 days of the last time the game
                   connected to it
                 </td>
+              </tr>
+              <tr>
+                <td>Brick Rivals arcade scores</td>
+                <td>
+                  Until the end of the week (Monday to Sunday, UTC) each was made in, then deleted within the hour. Your
+                  best scores and any score waiting to be checked are kept until the profile is deleted
+                </td>
+              </tr>
+              <tr>
+                <td>Brick Rivals ghost runs (recordings of your ranked duels that other players can race)</td>
+                <td>
+                  Your two newest, each for up to 14 days after the duel; all of them go when you delete the profile or
+                  it is deleted automatically
+                </td>
+              </tr>
+              <tr>
+                <td>Brick Rivals ghost races and the ghosts you were offered</td>
+                <td>7 days (for the daily limits), or until the profile is deleted</td>
               </tr>
               <tr>
                 <td>Supabase technical logs and database backups</td>
@@ -580,8 +633,9 @@
           In the last 12 months the games have collected: identifiers (advertising ID, app set ID, IP address and, for
           Brick Rivals online players, a sign-in ID and player name); internet or other network activity (interactions
           with the games and ads); approximate location worked out from your IP address; and Brick Rivals game records
-          (scores, trophies and duels). They come from you and your device. Purposes, recipients and retention are in
-          sections 4 to 10. We don't knowingly sell or share the personal information of consumers under 16.
+          (scores, trophies, duels and ghost runs). They come from you and your device. Purposes, recipients and
+          retention are in sections 4 to 10. The games are made for players aged 16 and over, and we don't knowingly
+          sell or share the personal information of consumers under 16.
         </p>
         <h3>How to use your rights</h3>
         <p>
@@ -616,13 +670,13 @@
 
         <h2 id="children">13. Children and teenagers</h2>
         <p>
-          The games are made for players aged 13 and over and are not directed at children under 13. We don't knowingly
-          collect personal information from children under 13. If you believe a child under 13 has a Brick Rivals online
-          profile, email us and we will delete it.
+          The games are made for players aged 16 and over and are not directed at children. We don't knowingly collect
+          personal information from anyone under 16. If you believe someone under 16 has a Brick Rivals online profile,
+          email us and we will delete it.
         </p>
         <p>
-          If you're under 18: Brick Rivals only goes online if you choose to, your profile uses a random name rather than
-          your real one, and you can delete it at any time in Settings. You can say no to personalised ads in the
+          If you're under 18: Brick Rivals only goes online if you choose to, your profile uses a random name rather
+          than your real one, and you can delete it at any time in Settings. You can say no to personalised ads in the
           consent message or later in Privacy Choices, and you can still play everything.
         </p>
 
