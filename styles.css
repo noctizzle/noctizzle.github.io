@@ -327,6 +327,94 @@ tr:last-child td {
   text-decoration: none;
 }
 
+/* Press kit */
+
+.press-logo {
+  margin: 8px 0 20px;
+  padding: 20px;
+  border-radius: 18px;
+  background: linear-gradient(160deg, var(--night-1), var(--night-2));
+  text-align: center;
+}
+
+.press-logo img {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+}
+
+.press-video {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 14px;
+  background: #000;
+}
+
+.facts th {
+  width: 32%;
+}
+
+/* Two screenshots a row on phones, four from tablet width; the art goes one a row, then two. */
+.doc .shots {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px 16px;
+  margin: 12px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.doc .shots li + li {
+  margin-top: 0;
+}
+
+.doc .shots.art {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+@media (min-width: 600px) {
+  .doc .shots {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .doc .shots.art {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.shots a {
+  display: block;
+  color: var(--muted);
+  font-size: 0.85rem;
+  line-height: 1.35;
+  text-decoration: none;
+}
+
+.shots a:hover {
+  color: var(--accent);
+}
+
+.shots img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 6px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.shots img.icon {
+  max-width: 160px;
+  border-radius: 28px;
+}
+
+.shots img.on-night {
+  padding: 12px;
+  background: linear-gradient(160deg, var(--night-1), var(--night-2));
+}
+
 /* Footer */
 
 .site-footer {
