@@ -1,4 +1,5 @@
-/* Noctizzle site. No web fonts, scripts, cookies or trackers: every page is plain HTML + this file. */
+/* Noctizzle site. No web fonts, cookies or trackers: every page is plain HTML + this file. The one script is the
+   challenge page's (c/), which reads the code in its link on the device and sends nothing. */
 
 :root {
   --bg: #f6f4fb;
@@ -413,6 +414,74 @@ tr:last-child td {
 .shots img.on-night {
   padding: 12px;
   background: linear-gradient(160deg, var(--night-1), var(--night-2));
+}
+
+/* Challenge page (c/): a friend's Brick Rivals code, big, with the ways to play it */
+
+.challenge-code {
+  margin: 16px 0;
+  padding: 18px 16px;
+  border-radius: 18px;
+  background: linear-gradient(160deg, var(--night-1), var(--night-2));
+  color: #fff;
+  text-align: center;
+}
+
+.challenge-label {
+  margin: 0 0 4px;
+  color: #d9ccff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.code-big {
+  margin: 0;
+  font:
+    700 clamp(1.5rem, 7.5vw, 2.4rem) / 1.25 ui-monospace,
+    Menlo,
+    Consolas,
+    'Roboto Mono',
+    monospace;
+  letter-spacing: 0.06em;
+  overflow-wrap: anywhere;
+  user-select: all;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+button.button {
+  border: 0;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.button.secondary {
+  border: 1px solid var(--border);
+  background: var(--surface-alt);
+  color: var(--text);
+}
+
+.button:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.status {
+  min-height: 1.6em;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.fine-print {
+  color: var(--muted);
+  font-size: 0.9rem;
 }
 
 /* Footer */

@@ -49,8 +49,9 @@
               Brick Rivals only goes online if you choose to play ranked duels or see the global leaderboards. It then
               uses an anonymous online profile (not linked to your name, email or phone number) with a randomly
               generated player name. Other players see that name, your trophies and your scores, and can race a
-              recording of your recent ranked duels as a "ghost". You can delete the profile in the game at any time,
-              and it is deleted automatically within 30 days of the last time the game connected to it.
+              recording of your recent ranked duels as a "ghost" (and a run you share by link). You can delete the
+              profile in the game at any time, and it is deleted automatically within 30 days of the last time the game
+              connected to it.
             </li>
           </ul>
         </div>
@@ -399,6 +400,13 @@
           <li>your player name and chosen ball trail (a cosmetic);</li>
           <li>your trophies (your duel rating), wins, losses, draws and win streak;</li>
           <li>
+            your ranked season results: for each season you played (or whose end changed your trophies), the most
+            trophies you reached, your trophies when it ended and what they were reset to, and your rated games and wins
+            that season; and, for the season under way, the most trophies you have reached so far and your games and
+            wins when it began. When a season ends (Season 1 ends on 29 November 2026, midnight UTC), trophies above
+            1,000 move halfway back towards 1,000, never below the start of the league you finished in;
+          </li>
+          <li>
             your arcade scores and the wave you reached, with the time each was submitted and how long the run lasted
             (while you're online, a score is sent automatically when an arcade run ends with a score above zero). We
             keep each arcade score until the end of the week it was made in (weeks start on Monday, UTC), for the weekly
@@ -408,14 +416,25 @@
           <li>your ranked duels: who you played, the scores, the trophy changes and when they happened;</li>
           <li>
             your ghost runs: a recording of your board in your two newest ranked duels that scored 2,000 or more, so
-            other players can race it as a "ghost" when nobody else is searching. It holds where you moved your paddle
-            and when you tapped, when your opponent's junk reached your board, and when the duel's clock ran out, with
-            that duel's score, the version of the duel rules, whether it was on a shaped court and your trophies when
-            you played it. It doesn't include anything about your phone or where you are;
+            other players can race it as a "ghost" when nobody else is searching, and any run you share by link (see
+            below). It holds where you moved your paddle and when you tapped, when your opponent's junk reached your
+            board, and when the duel's clock ran out, with that duel's score, the version of the duel rules, whether it
+            was on a shaped court and your trophies when you played it. It doesn't include anything about your phone or
+            where you are;
           </li>
           <li>
             the ghosts you're offered and race: which ghost and whose it was, the scores, your trophies when the race
             started, the trophy change and when;
+          </li>
+          <li>
+            Race my run links: when you share a ghost run after a ranked duel, a random link id for it, which run it is
+            and when you last shared it. A shared run is kept for 30 days from the last time you share it, even once it
+            is no longer one of your two newest; you have at most three shared at once (sharing a fourth ends the
+            oldest's link);
+          </li>
+          <li>
+            the boards of the ghost runs you open to race unranked (from a Race my run link or Recent Rivals): only
+            which board it was and when, so a ranked ghost race never puts you on a board you could have practised;
           </li>
           <li>
             if you or your opponent asked for a rematch after a ranked duel: who asked, when, and how many times;
@@ -460,6 +479,17 @@
             runs. Their phone gets the recording, to play it back, and they see your player name, ball trail, the
             trophies you had when you played it and how long ago that was, and your board, score and attacks as the
             recording plays back. A ghost race changes only the racer's trophies, never yours.
+          </li>
+          <li>
+            <strong>Race my run and Recent Rivals</strong>: anyone signed in to Brick Rivals who has a link you shared
+            can race that run, and players you have played a ranked duel against, or who raced one of your ghost runs,
+            can race one of your ghost runs from their Recent Rivals list. They see the same as in a ghost race. These
+            races are unranked: nobody's trophies change.
+          </li>
+          <li>
+            <strong>Recent Rivals</strong>: players you have played a ranked duel against, or who raced one of your
+            ghost runs, see you in their Recent Rivals list (their last 10 rivals): your player name, ball trail and
+            trophies now, and their wins, losses and draws against you.
           </li>
         </ul>
         <p>
@@ -543,8 +573,8 @@
               </tr>
               <tr>
                 <td>
-                  Brick Rivals's online duels, matchmaking, ghost races, trophies and leaderboards, and keeping them
-                  fair
+                  Brick Rivals's online duels, matchmaking, ghost races, trophies, ranked seasons, Race my run links,
+                  Recent Rivals and leaderboards, and keeping them fair
                 </td>
                 <td><a href="#brick-brawl-online">Section 5</a></td>
                 <td>
@@ -722,13 +752,28 @@
               <tr>
                 <td>Brick Rivals ghost runs (recordings of your ranked duels that other players can race)</td>
                 <td>
-                  Your two newest, each for up to 14 days after the duel; all of them go when you delete the profile or
-                  it is deleted automatically
+                  Your two newest, each for up to 14 days after the duel, and any you share by link, for 30 days from
+                  the last time you share it; all of them go when you delete the profile or it is deleted automatically
                 </td>
               </tr>
               <tr>
                 <td>Brick Rivals ghost races and the ghosts you were offered</td>
                 <td>7 days (for the daily limits), or until the profile is deleted</td>
+              </tr>
+              <tr>
+                <td>Brick Rivals Race my run links</td>
+                <td>
+                  30 days from the last time you share the run, until you share a fourth, or until the profile is
+                  deleted
+                </td>
+              </tr>
+              <tr>
+                <td>Brick Rivals ranked season results</td>
+                <td>Until the profile is deleted</td>
+              </tr>
+              <tr>
+                <td>Brick Rivals boards you raced unranked (from a Race my run link or Recent Rivals)</td>
+                <td>15 days after you last opened a run on that board, or until the profile is deleted</td>
               </tr>
               <tr>
                 <td>Supabase technical logs and database backups</td>
@@ -848,6 +893,13 @@
           <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement"
             >GitHub's privacy statement</a
           >). Email links open your own email app.
+        </p>
+        <p id="challenge-links">
+          Brick Rivals challenge links (noctizzle.github.io/c/) carry a challenge code after the # sign: a board and a
+          score to beat, nothing about you. Your browser keeps that part of a link to itself, so it never reaches the
+          website. The page reads the code on your device to show it and to open the game, and doesn't send it anywhere.
+          Race my run links (noctizzle.github.io/c/#R- and a run's id) work the same way: the page reads the run's id on
+          your device to open the game, and doesn't send it anywhere.
         </p>
 
         <h2 id="changes">15. Changes to this policy</h2>
