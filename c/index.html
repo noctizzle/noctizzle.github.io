@@ -8,7 +8,7 @@
     <title>Brick Rivals challenge — Noctizzle</title>
     <meta
       name="description"
-      content="A friend has challenged you to beat their score in Brick Rivals, the neon brick breaker. Open the challenge in the game, or get Brick Rivals for iPhone."
+      content="A friend has challenged you to beat their score in Brick Rivals, the neon brick breaker. Open the challenge in the game, or get Brick Rivals for iPhone or Android."
     />
     <!-- Link previews (Messages, WhatsApp, Discord, X): the same for every link, since the code or run after the #
          never reaches the website. The Smart App Banner offers the game in Safari on iPhone. -->
@@ -49,7 +49,7 @@
     <main class="doc">
       <div class="wrap prose">
         <h1 id="title">You've been challenged!</h1>
-        <p class="meta">Brick Rivals by Noctizzle · a neon brick breaker for iPhone, coming soon to Android</p>
+        <p class="meta">Brick Rivals by Noctizzle · a neon brick breaker for iPhone and Android</p>
 
         <div id="found" hidden>
           <p>A friend wants you to beat their score on the same board in Brick Rivals.</p>
@@ -63,7 +63,7 @@
           </p>
           <p id="status" class="status" role="status" aria-live="polite"></p>
           <p>
-            No game yet? Get Brick Rivals for iPhone below: the button copies the code first, so you can paste it in
+            No game yet? Get Brick Rivals below: the buttons copy the code first, so you can paste it in
             <strong>Daily Wall › Enter a code</strong>, or tap the link again.
           </p>
         </div>
@@ -76,7 +76,7 @@
           <p class="actions">
             <a id="race-open" class="button" href="/c/">Open in Brick Rivals</a>
           </p>
-          <p>No game yet? Get Brick Rivals for iPhone below, then come back here and tap Open in Brick Rivals.</p>
+          <p>No game yet? Get Brick Rivals below, then come back here and tap Open in Brick Rivals.</p>
         </div>
 
         <div id="missing" hidden>
@@ -96,9 +96,11 @@
         <h2 id="get">Get Brick Rivals</h2>
         <p id="get-actions" class="actions">
           <a class="button" href="https://apps.apple.com/app/id6822359035">App Store (iPhone)</a>
+          <a class="button" href="https://play.google.com/store/apps/details?id=com.noctizzle.brickbrawl"
+            >Google Play (Android)</a
+          >
         </p>
         <p id="get-status" class="status" role="status" aria-live="polite"></p>
-        <p class="fine-print">On Android? Brick Rivals is coming soon to Google Play.</p>
         <p class="fine-print">
           Challenges are just for fun: they never count for trophies or leaderboards. This page reads the code or run
           from the link on your device and doesn't send it anywhere.
@@ -135,7 +137,7 @@
         var raceOpen = document.getElementById('race-open');
         var status = document.getElementById('status');
         var getStatus = document.getElementById('get-status');
-        var getButton = document.querySelector('#get-actions a');
+        var getButtons = document.querySelectorAll('#get-actions a');
         var banner = document.querySelector('meta[name="apple-itunes-app"]');
         var bannerApp = banner ? banner.getAttribute('content') : '';
         var heading = title.textContent;
@@ -218,16 +220,18 @@
           });
         });
 
-        // Get the game copies the code first (the App Store still opens as usual), so it's ready to paste once
+        // Get the game copies the code first (the store still opens as usual), so it's ready to paste once
         // the game is installed. A run has no code to paste: Open in Brick Rivals takes it to the game.
-        getButton.addEventListener('click', function () {
-          var later = 'Once Brick Rivals is installed, come back here and tap Open in Brick Rivals.';
-          if (found.hidden) {
-            getStatus.textContent = race.hidden ? '' : later;
-            return;
-          }
-          copyText(codeEl.textContent, function (ok) {
-            getStatus.textContent = ok ? 'Code copied – paste it in Brick Rivals: Daily Wall › Enter a code.' : later;
+        Array.prototype.forEach.call(getButtons, function (getButton) {
+          getButton.addEventListener('click', function () {
+            var later = 'Once Brick Rivals is installed, come back here and tap Open in Brick Rivals.';
+            if (found.hidden) {
+              getStatus.textContent = race.hidden ? '' : later;
+              return;
+            }
+            copyText(codeEl.textContent, function (ok) {
+              getStatus.textContent = ok ? 'Code copied – paste it in Brick Rivals: Daily Wall › Enter a code.' : later;
+            });
           });
         });
 
