@@ -49,9 +49,9 @@
               Brick Rivals only goes online if you choose to play ranked duels or see the global leaderboards. It then
               uses an anonymous online profile (not linked to your name, email or phone number) with a randomly
               generated player name. Other players see that name, your trophies and your scores, and can race a
-              recording of your recent ranked duels as a "ghost" (and a run you share by link). You can delete the
-              profile in the game at any time, and it is deleted automatically within 30 days of the last time the game
-              connected to it.
+              recording of your recent ranked duels (including ranked BOT duels that counted for trophies) as a "ghost"
+              (and a run you share by link). You can delete the profile in the game at any time, and it is deleted
+              automatically within 30 days of the last time the game connected to it.
             </li>
           </ul>
         </div>
@@ -442,12 +442,14 @@
           </li>
           <li>your ranked duels: who you played, the scores, the trophy changes and when they happened;</li>
           <li>
-            your ghost runs: a recording of your board in your two newest ranked duels that scored 2,000 or more, so
+            your ghost runs: a recording of your board in your four newest ranked duels that scored 2,000 or more, so
             other players can race it as a "ghost" when nobody else is searching, and any run you share by link (see
-            below). It holds where you moved your paddle and when you tapped, when your opponent's junk reached your
+            below). Your duels against other players come first; a ranked BOT duel that counted for trophies can be kept
+            too (it is still your own play), marked as a BOT duel and offered only after duels against other players. It
+            holds where you moved your paddle and when you tapped, when your opponent's (or the BOT's) junk reached your
             board, and when the duel's clock ran out, with that duel's score, the version of the duel rules, whether it
-            was on a shaped court and your trophies when you played it. It doesn't include anything about your phone or
-            where you are;
+            was on a shaped court, whether it was a BOT duel and your trophies when you played it. It doesn't include
+            anything about your phone or where you are;
           </li>
           <li>
             the ghosts you're offered and race: which ghost and whose it was, the scores, your trophies when the race
@@ -455,13 +457,14 @@
           </li>
           <li>
             your ranked BOT duels (when a ranked search finds no opponent or ghost, you play a computer opponent
-            labelled BOT): your score and the bot's, your trophies when it started, the trophy change, whether it
-            counted and when;
+            labelled BOT): your score and the bot's, your trophies when it started, whether it could count for trophies
+            when it started, the trophy change, whether it counted, whether the bot's reported score was too low to be
+            real (a fair-play check), whether its recording was sent to be kept as a ghost run, and when;
           </li>
           <li>
             Race my run links: when you share a ghost run after a ranked duel, a random link id for it, which run it is
             and when you last shared it. A shared run is kept for 30 days from the last time you share it, even once it
-            is no longer one of your two newest; you have at most three shared at once (sharing a fourth ends the
+            is no longer one of your four newest; you have at most three shared at once (sharing a fourth ends the
             oldest's link);
           </li>
           <li>
@@ -511,7 +514,8 @@
             <strong>Ghost races</strong>: when a player's ranked search finds nobody, they can race one of your ghost
             runs. Their phone gets the recording, to play it back, and they see your player name, ball trail, the
             trophies you had when you played it and how long ago that was, and your board, score and attacks as the
-            recording plays back. A ghost race changes only the racer's trophies, never yours.
+            recording plays back. A ghost race changes only the racer's trophies, never yours. A ghost from one of your
+            ranked BOT duels shows the same.
           </li>
           <li>
             <strong>Race my run and Recent Rivals</strong>: anyone signed in to Brick Rivals who has a link you shared
@@ -530,9 +534,11 @@
           leaderboards fair. An unusually high arcade score, or one made unusually fast for the length of the run, is
           shown only to you until we have checked it. Ranked duels, ghost races and BOT duels have daily limits on the
           trophies you can win and on rated games against the same player, and an unusually high win rate or score is
-          flagged for us to check. A duel score that is flagged, or one from a profile that is flagged or hidden, is
-          never kept as a ghost run. If a profile cheats, we can hide it from the leaderboards other players see. These
-          checks use only your game records listed above.
+          flagged for us to check. A BOT duel whose reported bot score is lower than the bot can really score is flagged
+          and doesn't count, and a run of wins against unusually low bot scores is flagged for us to check. A duel score
+          that is flagged, or one from a profile that is flagged or hidden, is never kept as a ghost run. If a profile
+          cheats, we can hide it from the leaderboards other players see. These checks use only your game records listed
+          above.
         </p>
         <h3>Deleting your profile</h3>
         <p>
@@ -786,7 +792,7 @@
               <tr>
                 <td>Brick Rivals ghost runs (recordings of your ranked duels that other players can race)</td>
                 <td>
-                  Your two newest, each for up to 14 days after the duel, and any you share by link, for 30 days from
+                  Your four newest, each for up to 14 days after the duel, and any you share by link, for 30 days from
                   the last time you share it; all of them go when you delete the profile or it is deleted automatically
                 </td>
               </tr>
