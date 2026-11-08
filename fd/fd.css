@@ -1,0 +1,63 @@
+/* Truth & Lies' landing page (DRAFT, ship lane): a few additions to the site's styles.css. The game's cream, navy
+   and brick red, for the store buttons and the lede only; the page keeps the site's header, type and dark mode. */
+
+.fd {
+  --fd-cream: #f4ede0;
+  --fd-navy: #24324a;
+  --fd-brick: #b0472e;
+  --fd-paper: #fffdf8;
+}
+
+.fd-lede {
+  font-size: 1.15rem;
+  line-height: 1.55;
+}
+
+.fd-stores {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 24px 0 32px;
+}
+
+.fd-store {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 200px;
+  min-height: 56px;
+  padding: 10px 18px;
+  border-radius: 12px;
+  background: var(--fd-navy);
+  color: var(--fd-paper);
+  text-decoration: none;
+}
+
+.fd-store:hover,
+.fd-store:focus-visible {
+  background: var(--fd-brick);
+  color: var(--fd-paper);
+}
+
+.fd-store .store-name {
+  font-weight: 800;
+  font-size: 1.05rem;
+}
+
+.fd-store .store-note {
+  font-size: 0.85rem;
+  opacity: 0.85;
+}
+
+.fd-store.soon,
+.fd-store[aria-disabled='true'] {
+  background: var(--surface-alt);
+  color: var(--muted);
+  cursor: default;
+}
+
+@media (max-width: 480px) {
+  .fd-store {
+    flex: 1 1 100%;
+  }
+}

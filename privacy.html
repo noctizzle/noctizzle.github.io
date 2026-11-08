@@ -6,7 +6,7 @@
     <title>Privacy Policy — Noctizzle</title>
     <meta
       name="description"
-      content="Privacy Policy for Brick Rivals, Daisy Grid, Pour Palette, Word Grove and Woolly Logic, games by Noctizzle for Android, iPhone and iPad."
+      content="Privacy Policy for Brick Rivals, Daisy Grid, Pour Palette, Word Grove, Woolly Logic and Truth &amp; Lies, games by Noctizzle for Android, iPhone and iPad."
     />
     <link rel="icon" href="img/favicon.png" />
     <link rel="stylesheet" href="styles.css" />
@@ -28,8 +28,8 @@
       <div class="wrap prose">
         <h1>Privacy Policy</h1>
         <p class="meta">
-          For Brick Rivals, Daisy Grid, Pour Palette, Word Grove and Woolly Logic by Noctizzle, on Android, iPhone and
-          iPad · Effective 30 October 2026
+          For Brick Rivals, Daisy Grid, Pour Palette, Word Grove, Woolly Logic and Truth &amp; Lies by Noctizzle, on
+          Android, iPhone and iPad · Effective 6 November 2026
         </p>
 
         <div class="note">
@@ -41,8 +41,8 @@
             </li>
             <li>Your progress and coins are saved on your phone.</li>
             <li>
-              All five games show ads from Google AdMob. Google collects device and usage information to show and
-              measure ads and, where the law requires it, the game asks for your consent first. See
+              All six games show ads from Google AdMob. Google collects device and usage information to show and measure
+              ads and, where the law requires it, the game asks for your consent first. See
               <a href="https://business.safety.google/privacy/">Google's business data responsibility site</a>.
             </li>
             <li>
@@ -138,6 +138,15 @@
                   Puzzle progress, daily-puzzle results and streak, hints, stats, settings, daily-reminder choices
                 </td>
               </tr>
+              <tr>
+                <td>Truth &amp; Lies (Detective: Truth &amp; Lies in the stores)</td>
+                <td>Yes</td>
+                <td>No</td>
+                <td>
+                  Story, Daily Shift and Overtime progress, streak, commendations, Notebook, station decorations,
+                  Gazette pages, settings, daily-reminder choices
+                </td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -194,6 +203,31 @@
           Shows Google AdMob ads (<a href="#ads">section 4</a>). Has no account or online profile, and we run no server
           for it. Every puzzle, including the daily puzzle, is built into the game or made on your phone, not
           downloaded. Saves your progress on your phone (<a href="#on-your-phone">section 3</a>).
+        </p>
+
+        <h3 id="truth-and-lies">Truth &amp; Lies</h3>
+        <p>
+          Shows Google AdMob ads (<a href="#ads">section 4</a>). Has no account or online profile, and we run no server
+          for it. Saves your progress on your phone (<a href="#on-your-phone">section 3</a>).
+        </p>
+        <p>
+          <strong>Daily packs.</strong> The first 60 Daily Shifts are built into the game. After your first shift, at
+          most once a day, the game asks our website (noctizzle.github.io/fd/packs/) whether a new pack of Daily Shifts
+          is out, and downloads it if so (about once a month). It is a plain request for a public file: it carries no
+          identifier and nothing about you or your game. GitHub, which hosts the website, sees your IP address to send
+          the file, as it does for any visit (<a href="#website">section 14</a>). A pack holds only game text (visitors,
+          their claims and their evidence) and is checked against a fingerprint before the game uses it.
+        </p>
+        <p>
+          <strong>The daily reminder</strong> is optional and off until you turn it on. It is scheduled on your phone by
+          its own notification system, at most one a day. It collects nothing and uses no push token: nothing about it
+          is sent to us or to anyone else. Turn it off in the game's <em>Settings → Daily reminder</em>, or in your
+          phone's notification settings.
+        </p>
+        <p>
+          <strong>Sharing.</strong> The Share button hands a short text (the shift's number, a tally and a row of ticks,
+          no names and no answers) and, on iPhone and iPad, a picture of the station cat to your phone's share sheet.
+          You choose where it goes; the game itself sends nothing.
         </p>
 
         <h2 id="on-your-phone">3. Information saved on your phone</h2>
@@ -284,6 +318,61 @@
           nothing about it is sent to us or to anyone else. Turn it off in the game's
           <em>Settings → Daily reminder</em>, or in your phone's notification settings.
         </p>
+        <p>Truth &amp; Lies saves these items on your phone:</p>
+        <ul>
+          <li>
+            <code>fd-progress-v2</code>: the story shifts you have finished and their results, the Big Cases you have
+            charged (whom, whether you were right, and the proofs you named), whether the first shift's lessons and the
+            ads consent step are done, which Christmas shifts you have opened, and which content notes (shown before a
+            darker case) you have seen;
+          </li>
+          <li>
+            <code>fd-run-v2</code>: the shift in progress, so you can carry on after closing the game (which shift,
+            which visitor, your calls so far, whether you are in a crime scene, the helps used and when it started);
+          </li>
+          <li><code>fd-scenes-v1</code>: for each crime scene, what you have looked at and noted;</li>
+          <li>
+            <code>fd-board-v1</code>: for each case board, the answers you have tried, the questions settled and the
+            proofs on the charge sheet;
+          </li>
+          <li>
+            <code>fd-notebook-v1</code>: the villagers' tells and the desk rules you have unlocked (when, and how often
+            each tell has given someone away), and your casebooks;
+          </li>
+          <li>
+            <code>fd-daily-v1</code>: each day's Daily Shift result, your current and best streak, a forgiven missed
+            day, and the streak rewards already given;
+          </li>
+          <li><code>fd-wallet-v1</code>: your commendations, and how many you have earned in all;</li>
+          <li><code>fd-decor-v1</code>: the station decorations you own, and where you have put them;</li>
+          <li>
+            <code>fd-gazette-v1</code>: the Gazette pages you have collected, and your Daily numbers for each month's
+            page;
+          </li>
+          <li>
+            <code>fd-overtime-v1</code>: the next Overtime shift's number, a random number this copy of the game uses to
+            shuffle Overtime shifts, and the visitors you have met recently, so they don't come back too soon;
+          </li>
+          <li><code>fd-settings-v1</code>: your Describe tells and Reduce motion switches;</li>
+          <li>
+            <code>fd-reminders-v1</code>: whether the optional daily reminder is on, its time, and how you answered the
+            offer (the reminders are local notifications scheduled on your phone; nothing is sent);
+          </li>
+          <li><code>fd-review-v1</code>: when it last asked you to rate it, and the days you have played;</li>
+          <li><code>fd-music-v1</code>: the music's shuffle order;</li>
+          <li>
+            <code>fd-packs-v1</code> and one <code>fd-pack-</code> item per pack: the Daily packs downloaded from our
+            website (section 2), and when the game last checked for one;
+          </li>
+          <li>
+            <code>fd-helps-v1</code>: which free helps you have used (the first Ask Biscuit, the first Second Look and
+            today's free Second Look), and how many videos in a row failed to load.
+          </li>
+        </ul>
+        <p>
+          On iPhone and iPad, iOS may include these in your iCloud or computer backup; they stay until you delete the
+          game.
+        </p>
         <p>
           <strong>Brick Rivals' reminders</strong> are optional and off until you turn them on. They tell you before
           Rush Hour, when your Daily Wall streak needs a try and when an event starts. They are scheduled on your phone
@@ -360,6 +449,11 @@
           you leave the puzzle first); returning players see it when the game opens; always before any ads load. In
           Woolly Logic, on a new install, the check with Google happens at that same moment.
         </p>
+        <p>
+          Truth &amp; Lies shows it once you have finished your first shift and tapped Continue on its report; returning
+          players see it when the game opens; always before any ads load. In Truth &amp; Lies, on a new install, the
+          check with Google happens at that same moment.
+        </p>
         <h3 id="tracking-on-iphone">Tracking on iPhone</h3>
         <p>
           Before Google's ads may use your iPhone's advertising identifier (IDFA), Brick Rivals asks for your permission
@@ -379,6 +473,11 @@
         </p>
         <p>
           Woolly Logic on iPhone and iPad asks for the same permission at the same moment, after Google's consent
+          message where that applies, and the game plays the same whichever you choose. You can change it at any time in
+          Settings → Privacy &amp; Security → Tracking.
+        </p>
+        <p>
+          Truth &amp; Lies on iPhone and iPad asks for the same permission at the same moment, after Google's consent
           message where that applies, and the game plays the same whichever you choose. You can change it at any time in
           Settings → Privacy &amp; Security → Tracking.
         </p>
@@ -717,7 +816,7 @@
               </tr>
               <tr>
                 <td>GitHub, Inc.</td>
-                <td>Hosts this website</td>
+                <td>Hosts this website, and the Daily packs Truth &amp; Lies downloads from it</td>
                 <td>
                   Independent controller of its server logs ·
                   <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement"
@@ -735,8 +834,8 @@
         </div>
         <p>
           <strong>Apple.</strong> On iPhone, you get Brick Rivals from Apple's App Store. You get Word Grove there too.
-          Daisy Grid is there as well, for iPhone and iPad. So is Woolly Logic. Apple handles the download, updates and
-          any rating or review you leave, under its own
+          Daisy Grid is there as well, for iPhone and iPad. So is Woolly Logic. So is Truth &amp; Lies, for iPhone and
+          iPad. Apple handles the download, updates and any rating or review you leave, under its own
           <a href="https://www.apple.com/legal/privacy/">privacy policy</a>, and Word Grove's Game Center scores and
           achievements if you sign in to Game Center (<a href="#word-grove">section 2</a>). If you have chosen in your
           iPhone's or iPad's settings to share analytics with app developers, Apple gives us crash reports and
@@ -950,6 +1049,15 @@
           website. The page reads the code on your device to show it and to open the game, and doesn't send it anywhere.
           Race my run links (noctizzle.github.io/c/#R- and a run's id) work the same way: the page reads the run's id on
           your device to open the game, and doesn't send it anywhere.
+        </p>
+        <p id="truth-and-lies-pages">
+          Truth &amp; Lies' pages (noctizzle.github.io/fd/) load nothing from anyone else. A link to them may end in a
+          source name such as <code>?s=share</code> or <code>?s=tiktok</code>, which says where the link was shared,
+          never anything about you; the page passes it on to the App Store or Google Play button so we can count
+          installs by source in their own anonymous reports. The "Second opinion" page
+          (noctizzle.github.io/fd/second-opinion/) shows one visitor a day; it remembers that you answered today in your
+          browser's own storage (<code>fd-second-opinion-v1</code>), on your device only, and sends your answer nowhere.
+          Clear your browser's site data to remove it.
         </p>
 
         <h2 id="changes">15. Changes to this policy</h2>

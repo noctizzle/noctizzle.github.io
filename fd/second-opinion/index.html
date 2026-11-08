@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- DRAFT (ship lane, frontdesk/ship): published only by the owner's site publish, a month at a time
+         (docs/FRONTDESK_SHIP.md, part B, "Second opinion"). No cookies, no analytics, no fonts or requests to anyone else:
+         the policy below allows this site's own files and nothing more. localStorage only remembers that you
+         answered today, on this device. -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'"
+    />
+    <meta name="robots" content="noindex" />
+    <meta name="referrer" content="no-referrer" />
+    <title>Second opinion — Truth &amp; Lies</title>
+    <meta
+      name="description"
+      content="One visitor at the front desk, one claim, one piece of evidence. Would you believe them? A new one every day, from Truth & Lies."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Noctizzle" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:title" content="Would you believe them?" />
+    <meta
+      property="og:description"
+      content="One visitor, one claim, one piece of evidence. Believe or doubt? A new one every day, from Truth & Lies."
+    />
+    <meta property="og:url" content="https://noctizzle.github.io/fd/second-opinion/" />
+    <link rel="icon" href="/img/favicon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="../links.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <main class="so">
+      <header class="so-head">
+        <p class="so-kicker">Truth &amp; Lies · Second opinion</p>
+        <h1 class="so-title">Would you believe them?</h1>
+      </header>
+
+      <section class="so-card" id="visit" aria-live="polite" hidden>
+        <!-- The face sits beside the claim, so the evidence and the two buttons fit a phone's first screen. -->
+        <div class="so-who">
+          <img class="so-bust" id="bust" alt="" width="320" height="400" />
+          <div class="so-said">
+            <p class="so-name" id="name"></p>
+            <blockquote class="so-claim" id="claim"></blockquote>
+          </div>
+        </div>
+
+        <figure class="so-evidence">
+          <img class="so-ev" id="ev" alt="" width="361" height="240" />
+          <figcaption>
+            <span class="so-ev-label" id="ev-label"></span>
+            <span class="so-detail" id="ev-detail"></span>
+          </figcaption>
+        </figure>
+
+        <div class="so-verdicts" id="verdicts" role="group" aria-label="Your call">
+          <button type="button" class="so-btn so-doubt" id="doubt">Doubt</button>
+          <button type="button" class="so-btn so-believe" id="believe">Believe</button>
+        </div>
+      </section>
+
+      <section class="so-card so-reveal" id="reveal" aria-live="polite" hidden>
+        <p class="so-call" id="call"></p>
+        <h2 class="so-truth" id="truth" tabindex="-1"></h2>
+        <blockquote class="so-line" id="line"></blockquote>
+        <p class="so-tomorrow">Come back tomorrow for another.</p>
+      </section>
+
+      <section class="so-card so-empty" id="empty" hidden>
+        <p>Today's visitor hasn't arrived yet. Come back soon.</p>
+      </section>
+
+      <noscript>
+        <p class="so-card">This little game needs JavaScript. The full game is free on iPhone, iPad and Android.</p>
+      </noscript>
+
+      <section class="so-get" aria-labelledby="get">
+        <h2 id="get">A whole village of fibbers</h2>
+        <p>
+          In Truth &amp; Lies you're the Sergeant at the front desk. Check the evidence, swipe to believe or doubt, and
+          crack the Big Case. No energy, no lives, no waiting.
+        </p>
+        <div class="so-stores" role="group" aria-label="Get the game">
+          <a class="so-store" data-store="apple" aria-disabled="true">
+            <span class="store-name">App Store</span>
+            <span class="store-note">iPhone, iPad and iPhone Duo</span>
+          </a>
+          <a class="so-store" data-store="play" aria-disabled="true">
+            <span class="store-name">Google Play</span>
+            <span class="store-note">Android phones and tablets</span>
+          </a>
+        </div>
+        <p class="so-small">
+          <a href="../">About the game</a> · <a href="/privacy.html">Privacy</a> · This page uses no cookies and sends
+          nothing about you.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
